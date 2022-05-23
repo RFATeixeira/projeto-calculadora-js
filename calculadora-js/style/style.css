@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Signika', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #17d878, #009758);
+}
+
+.myCalculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    width: 23.5rem;
+    height: 33rem;
+    grid-template-columns: repeat(4, 5.5rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 4.8rem);
+    background: #3cc4ea;
+    border-radius: 12px;
+    box-shadow: 0 .8rem 0 #0075a4;
+}
+
+.grid-container>button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #00c0b6;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 0 #006552;
+    width: 4.8rem;
+    height: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container>button:hover {
+    background: #00a59d;
+}
+
+.grid-container>button:active {
+    position: relative;
+    top: .5rem;
+    box-shadow: none;
+}
+
+.grid-container>.zero {
+    grid-column: span 2;
+    width: 10rem;
+    height: 3.5rem;
+}
+
+.grid-container>.output {
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 15px;
+    width: 21.5rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 2rem;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.grid-container>.output>.previous-operand {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+}
+
+.grid-container>.output>.current-operand {
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+.grid-container>.equal {
+    grid-row: span 2;
+    background: #f0604b;
+    box-shadow: 0 .5rem 0 rgb(211, 80, 59);
+    width: 4.5rem;
+    height: 8.5rem;
+}
+
+.grid-container>.equal:hover {
+    background: #db604d;
+}
+
+.grid-container>.clear {
+    background: #b9d84e;
+    box-shadow: 0 .5rem 0 #7e9532;
+}
+
+.grid-container>.clear:hover {
+    background: #92aa3a;
+}
